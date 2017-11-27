@@ -10,4 +10,4 @@ Un usuario puede iniciar sesión por medio de facebook para seguir directamente 
 
 ---
 
-> Esta aplicación usa el [API de facebook](https://developers.facebook.com) para recopilar información de los restaurantes y para permitir que se pueda comentar y seguir a las páginas de los restaurantes directamente desde __DomiApp__.
+> Esta aplicación usa el [API de facebook](https://developers.facebook.com) para permitir que se pueda comentar y seguir a las páginas de los restaurantes directamente desde __DomiApp__.
