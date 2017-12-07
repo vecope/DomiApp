@@ -15,11 +15,27 @@ if (Meteor.isServer) {
     });
 }
 
+Restaurants.deny({
+    insert() { return true; },
+    update() { return true; },
+    remove() { return true; },
+});
+
+Meteor.users.deny({
+    update() { return true; }
+});
+
+
 Meteor.methods({
 
     'restaurants.setGrade'(restId, grade) {
         //check(restId, String);
         check(grade, String);
+
+        // Make sure the user is logged in before inserting a task
+        if (! this.userId) {
+            throw new Meteor.Error('not-authorized');
+        }
 
         var a = Number(grade);
 
@@ -51,6 +67,10 @@ Meteor.methods({
 
     'users.setFav'(restId) {
 
+        // Make sure the user is logged in before inserting a task
+        if (! this.userId) {
+            throw new Meteor.Error('not-authorized');
+        }
 
         var cond = {favs: this.userId, _id: restId};
 

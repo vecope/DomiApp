@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b207a4c-3633-471e-9e71-36e84a28d89c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domiApp/.meteor/packages" afterPath="$PROJECT_DIR$/domiApp/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domiApp/.meteor/versions" afterPath="$PROJECT_DIR$/domiApp/.meteor/versions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx" afterPath="$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domiApp/imports/ui/App.jsx" afterPath="$PROJECT_DIR$/domiApp/imports/ui/App.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +19,8 @@
       <file leaf-file-name="restaurants.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-496">
-              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="581">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -51,8 +48,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx" />
         <option value="$PROJECT_DIR$/domiApp/imports/ui/App.jsx" />
+        <option value="$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx" />
       </list>
     </option>
   </component>
@@ -165,12 +162,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512171242117</updated>
       <workItem from="1512171243412" duration="153000" />
-      <workItem from="1512643178049" duration="652000" />
+      <workItem from="1512643178049" duration="781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="805000" />
+    <option name="totallyTimeSpent" value="934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="712" extended-state="0" />
@@ -227,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/domiApp/imports/api/restaurants.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="581">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
