@@ -118,13 +118,19 @@ class App extends Component {
 App.propTypes = {
     restaurants: PropTypes.array.isRequired,
     currentUser: PropTypes.object,
+    users: PropTypes.array.isRequired,
     favorites: PropTypes.array
 };
 
 export default createContainer(() => {
+
+    Meteor.subscribe('restaurants');
+    Meteor.subscribe('users');
+
     return {
         restaurants: Restaurants.find({}, { sort: { promedio: -1 } }).fetch(),
         currentUser: Meteor.user(),
+        users: Meteor.users.find().fetch(),
         favorites: Restaurants.find({favs: Meteor.userId()}).fetch()
     };
 }, App);

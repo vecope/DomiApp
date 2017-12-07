@@ -4,6 +4,17 @@ import { check } from 'meteor/check';
 
 export const Restaurants = new Mongo.Collection('restaurants');
 
+if (Meteor.isServer) {
+    // This code only runs on the server
+    Meteor.publish('restaurants', function restaurantsPublication() {
+        return Restaurants.find();
+    });
+
+    Meteor.publish('users', function usersPublication() {
+        return Meteor.users.find();
+    });
+}
+
 Meteor.methods({
 
     'restaurants.setGrade'(restId, grade) {
