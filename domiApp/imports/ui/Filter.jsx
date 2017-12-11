@@ -21,10 +21,10 @@ export default class Filter extends Component{
 
         // Find the text field via the React ref
         const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
         console.log(text);
 
-
+        const res = document.getElementById("results-cont");
+        res.style.display = "initial";
 
         let filtr = this.props.restaurants.filter((restaurant)=>(
             restaurant.nombre.toLowerCase() == text.toLowerCase()
@@ -48,17 +48,20 @@ export default class Filter extends Component{
         return(
             <div>
                 <form className="filter-restaurant" onSubmit={this.handleSearch} >
+                    <img src="/search.png" alt="Search icon for searchbar" className="search-icon"/>
                     <input
+                        id="filterInput"
                         type="text"
                         ref="textInput"
                         placeholder="Type to find restaurants"
                     />
                 </form>
-                <p>Results</p>
-
-                <ul>
-                    {this.renderFiltered()}
-                </ul>
+                <div id="results-cont">
+                    <h1>Results</h1>
+                    <ul>
+                        {this.renderFiltered()}
+                    </ul>
+                </div>
             </div>
         )
     }

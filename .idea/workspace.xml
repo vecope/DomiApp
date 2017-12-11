@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b207a4c-3633-471e-9e71-36e84a28d89c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/imports/ui/Favs.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/imports/ui/Filter.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/imports/ui/RestaurantList.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/imports/ui/RestaurantListItem.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/public/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/public/Frutiger.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/public/bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/public/ddown.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/domiApp/public/logo.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Documentation/UI:UX/Markups/Favs.png" afterPath="$PROJECT_DIR$/Documentation/UI:UX/Markups/Favs.png" />
-      <change beforePath="$PROJECT_DIR$/domiApp/client/main.css" afterPath="$PROJECT_DIR$/domiApp/client/main.css" />
-      <change beforePath="$PROJECT_DIR$/domiApp/client/main.html" afterPath="$PROJECT_DIR$/domiApp/client/main.html" />
-      <change beforePath="$PROJECT_DIR$/domiApp/imports/ui/App.jsx" afterPath="$PROJECT_DIR$/domiApp/imports/ui/App.jsx" />
-      <change beforePath="$PROJECT_DIR$/domiApp/imports/ui/Restaurant.jsx" afterPath="$PROJECT_DIR$/domiApp/imports/ui/Restaurant.jsx" />
-    </list>
+    <list default="true" id="1b207a4c-3633-471e-9e71-36e84a28d89c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -321,12 +303,12 @@
       <workItem from="1512829916694" duration="49000" />
       <workItem from="1512830050201" duration="2251000" />
       <workItem from="1512835909686" duration="9906000" />
-      <workItem from="1512857401209" duration="27166000" />
+      <workItem from="1512857401209" duration="28551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45012000" />
+    <option name="totallyTimeSpent" value="46397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />

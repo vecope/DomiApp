@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import Restaurant from './Restaurant';
-import {Meteor} from "meteor/meteor";
+import Favrestaurant from './favRestaurant';
 
 export default class Favs extends Component{
 
@@ -21,7 +20,7 @@ export default class Favs extends Component{
         console.log("rend2");
         console.log(this.props.favorites.length);
         return this.props.favorites.map((restaurant) => (
-            <Restaurant key={restaurant._id} restaurant={restaurant} user={this.props.currentUser}/>
+            <Favrestaurant key={restaurant._id} restaurant={restaurant} user={this.props.currentUser}/>
         ));
     }
 
@@ -29,11 +28,9 @@ export default class Favs extends Component{
         return(
             <div>
                 {this.props.currentUser ?
-
-                    <div>
-                        <p>Favorites</p>
-                        <button onClick={this.showFavorites}>Show Favorites</button>
-                        <ul id="showFavs" style={{display: "none"}}>
+                    <div className = "fav-container">
+                        <h1>Favorites</h1>
+                        <ul id="showFavs">
                             {this.renderFavorites()}
                         </ul>
                     </div>: ''

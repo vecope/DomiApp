@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-export default class Restaurant extends Component {
+export default class Favrestaurant extends Component {
 
     constructor(props){
         super(props);
@@ -69,19 +69,6 @@ export default class Restaurant extends Component {
 
                     </div>
                     <div className="filter-actions">
-
-                        {this.props.user?
-                            <button className="fav action" id="favButton" onClick={this.markFavorite.bind(this)}
-                                    style={{display:"initial"}}>
-                                &nbsp;
-                                Favorite</button>
-                            :
-                            <button className="fav action" id="favButton" onClick={this.markFavorite.bind(this)}
-                                    style={{display:"none"}}>
-                                &nbsp;
-                                Favorite</button>
-                        }
-
                         {this.props.user ?
                             <div className="action list-stars" id="stars">
                                 <fieldset className="rating" onClick={this.handleClick.bind(this)} id="campo">
@@ -106,7 +93,7 @@ export default class Restaurant extends Component {
     }
 }
 
-Restaurant.propTypes = {
+Favrestaurant.propTypes = {
 
     restaurant: PropTypes.object.isRequired
 };
