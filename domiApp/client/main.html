@@ -1,5 +1,5 @@
 <head>
-  <title>domiApp</title>
+    <title>domiApp</title>
 </head>
 
 <body>
@@ -19,13 +19,23 @@
 </body>
 
 <template name="login">
-    {{#if currentUser}}
-
-        <img src="http://graph.facebook.com/{{getIdent}}/picture?type=square" alt="{{currentUser.username}}'s profile pic" />
-        Welcome <strong>{{currentUser.username}}</strong>
-
-        <br> <br> <button class="log-out">Log out</button>
-    {{else}}
-        <button class="log-in" >Facebook Login</button>
-    {{/if}}
+    <div id="navbar">
+        <div id="logo-container">
+            <img id="app-logo" src="/logo.png" alt="DomiApp Logo">
+        </div>
+        <div id="user-container">
+            {{#if currentUser}}
+                <img id="profile-pic" src="http://graph.facebook.com/{{getIdent}}/picture?type=square" alt="{{currentUser.username}}'s profile pic" />
+                <user-name>{{currentUser.username}}</user-name>
+                <div class="dropdown">
+                    <button class="dropbtn">&nbsp;</button>
+                    <div class="dropdown-content">
+                        <button class="log-out">Log out</button>
+                    </div>
+                </div>
+            {{else}}
+                <button class="log-in" >Facebook Login</button>
+            {{/if}}
+        </div>
+    </div>
 </template>

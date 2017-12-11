@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createContainer } from 'meteor/react-meteor-data';
-import ReactDOM from 'react-dom';
 
 import { Restaurants } from '../api/restaurants.jsx';
-import Restaurant from './Restaurant.jsx';
+
+import RestaurantList from './RestaurantList';
+import Filter from './Filter';
+import Favs from './Favs';
 
 import { Meteor } from 'meteor/meteor';
 
@@ -16,100 +18,51 @@ class App extends Component {
         super(props);
 
         this.state = {
+            currentlyViewing : 0,
             filtered:[]
-        }
+        };
 
+        this.selectList = this.selectList.bind(this);
+        this.selectFilter = this.selectFilter.bind(this);
+        this.selectFavorites = this.selectFavorites.bind(this);
     }
 
-    handleSearch(event) {
-        event.preventDefault();
-
-        // Find the text field via the React ref
-        const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
-        console.log(text);
-
-
-
-        let filtr = this.props.restaurants.filter((restaurant)=>(
-            restaurant.nombre.toLowerCase() == text.toLowerCase()
-        ));
-
+    selectList(){
         this.setState({
-            filtered:filtr
+            currentlyViewing: 0
         });
-
-        // Clear form
-        ReactDOM.findDOMNode(this.refs.textInput).value = '';
     }
 
-    showFavorites(){
-        var f = document.getElementById('showFavs');
-        f.style.display = "initial";
+    selectFilter(){
+        this.setState({
+            currentlyViewing: 1
+        });
     }
 
-
-    renderRestaurants() {
-        return this.props.restaurants.map((restaurant) => (
-            <Restaurant key={restaurant._id} restaurant={restaurant} user={this.props.currentUser}/>
-        ));
-    }
-
-    renderFiltered(){
-
-        return this.state.filtered.map((restaurant) => (
-            <Restaurant key={restaurant._id} restaurant={restaurant} user={this.props.currentUser} />
-        ));
-    }
-
-    renderFavorites(){
-        return this.props.favorites.map((restaurant) => (
-            <Restaurant key={restaurant._id} restaurant={restaurant} user={this.props.currentUser}/>
-        ));
+    selectFavorites(){
+        console.log("2");
+        this.setState({
+            currentlyViewing: 2
+        });
     }
 
     render() {
         return (
             <div className="container">
-
-                <header>
-                    <h1>Restaurant list</h1>
-                </header>
-
-                {this.props.currentUser ? console.log(Meteor.user().services.facebook.gender): console.log('aun no encuentra el username')}
-
-
-                <ul>
-                    {this.renderRestaurants()}
-                </ul>
-
-
-                <form className="filter-restaurant" onSubmit={this.handleSearch.bind(this)} >
-                    <input
-                        type="text"
-                        ref="textInput"
-                        placeholder="Type to find restaurants"
-                    />
-                </form>
-                <p>Results</p>
-
-                <ul>
-                    {this.renderFiltered()}
-                </ul>
-
-                {this.props.currentUser ?
-
-                    <div>
-
-                        <p>Favorites</p>
-                        <button onClick={this.showFavorites.bind(this)}>Show Favorites</button>
-                        <ul id="showFavs" style={{display: "none"}}>
-                            {this.renderFavorites()}
-                        </ul>
-
-                    </div>: ''
+                <div className="opt-btn-cont">
+                    <button className="OptBtn" onClick={this.selectList}>Restaurants list</button>
+                    <button className="OptBtn" onClick={this.selectFilter}>Filters</button>
+                    <button className="OptBtn" onClick={this.selectFavorites}>Favorites</button>
+                </div>
+                {this.state.currentlyViewing === 0?
+                    <RestaurantList restaurants={this.props.restaurants} user={this.props.currentUser}/> : ""
                 }
-
+                {this.state.currentlyViewing === 1?
+                    <Filter restaurants={this.props.restaurants} currentUser={this.props.currentUser}/> : ""
+                }
+                {this.state.currentlyViewing === 2?
+                    <Favs currentUser={this.props.currentUser} favorites={this.props.favorites}/> : ""
+                }
             </div>
         );
     }
