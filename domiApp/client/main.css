@@ -181,6 +181,8 @@ Lista de restaurantes
     display: flex ;
     flex-wrap: wrap;
     padding: 10px;
+    align-content: center;
+    justify-content: center;
 }
 
 .list-item{
@@ -393,6 +395,19 @@ Filtros
     color: lightgray;
     border-radius: 25px;
     font-size: 1.2em;
+}
+
+
+.pagination{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.pagination li a{
+    color: lightgray;
+    text-decoration: none;
+    padding-right: 5px;
 }
 
 /*********************************************************************************************************************

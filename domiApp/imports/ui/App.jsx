@@ -52,7 +52,9 @@ class App extends Component {
                 <div className="opt-btn-cont">
                     <button className="OptBtn" onClick={this.selectList}>Restaurants list</button>
                     <button className="OptBtn" onClick={this.selectFilter}>Filters</button>
-                    <button className="OptBtn" onClick={this.selectFavorites}>Favorites</button>
+                    {this.props.currentUser ?
+                        <button className="OptBtn" onClick={this.selectFavorites}>Favorites</button> : ""
+                    }
                 </div>
                 {this.state.currentlyViewing === 0?
                     <RestaurantList restaurants={this.props.restaurants} user={this.props.currentUser}/> : ""

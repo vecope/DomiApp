@@ -53,7 +53,7 @@ export default class RestaurantListItem extends Component {
                         </div>
                         <div className="list-actions">
                             {this.props.user ?
-                                <div className="col-md-5 px-1 list-stars" id="stars">
+                                <div className=" list-stars" id="stars">
                                     <fieldset className="rating" onClick={this.handleClick.bind(this)} id="campo">
                                         <input type="radio" id="star5" name="rating" value="5"/><label className="full" htmlFor="star5" title="Awesome - 5 stars" ref="5"></label>
                                         <input type="radio" id="star4half" name="rating" value="4.5"/><label className="half" htmlFor="star4half" title="PrettyGood - 4.5 stars"></label>
